@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "global/global_proto/proto/global.proto";
+
+service OvsService {
+    rpc GetOvs(global.Empty) returns (OvsGetterResponse) {}
+    rpc UpdateOvs(OvsEntity) returns (global.Response) {}
+}
+
+message OvsEntity {
+    string OvsName = 1;
+
+}
+
+message OvsGetterResponse {
+
+}

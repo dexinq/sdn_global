@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package ovncontroller;
+
+import "global/global_proto/proto/global.proto";
+
+service LogicalSwitchAction {
+    rpc GetLogicalSwitchInfo (LSwitchRequest) returns (LSwitchGetterResponse) {}
+    rpc ModifyLogicalSwitch (LSwitchRequest) returns (global.Response) {}
+    rpc AddLogicalSwitch (LSwitchRequest) returns (global.Response) {}
+}
+
+service LogicalRouterAction {
+    rpc GetLogicalRouterInfo (LRouterRequest) returns (LRouterGetterResponse) {}
+    rpc ModifyLogicalRouter (LRouterRequest) returns (global.Response) {}
+    rpc AddLogicalRouter (LRouterRequest) returns (global.Response) {}
+}
+
+message LRouterRequest {
+    string RouterName = 1;
+    OvnController ovn = 2;
+}
+
+message OvnController {
+    string Name = 1;
+}
+
+message LSwitchRequest {
+    string SwitchName = 1;
+    OvnController ovn = 2;
+}
+
+message LSwitchGetterResponse {
+    repeated LSwitch p = 1;
+}
+
+message LRouterGetterResponse {
+
+}
+
+
+message LSwitch {
+    string Name = 1;
+    repeated LSPort p = 2;
+}
+
+message LSPort {
+    string Name = 1;
+}
+
+message LRouter {
+    string Name = 1;
+    repeated LRPort p = 2;
+}
+
+message LRPort {
+    string Name =1 ;
+}

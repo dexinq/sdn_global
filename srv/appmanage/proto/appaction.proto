@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "global/global_proto/proto/global.proto";
+
+service appAction {
+    rpc GetAppObject(PlaceHolder) returns (AppListResponse) {}
+    rpc UpdateAppObject(AppObject) returns (global.Response) {}
+    rpc AddAppObject(AppObject) returns (global.Response) {}
+}
+
+message PlaceHolder {}
+
+message AppObject {
+    string AppId = 1;
+    string AppName = 2;
+    string AppType = 3;
+    int32 AppStatus = 4;
+}
+
+
+message AppListResponse {
+    repeated AppObject ao = 1;
+}

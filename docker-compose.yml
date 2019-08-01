@@ -1,0 +1,52 @@
+consul:
+  command: -server -bootstrap -rejoin
+  image: progrium/consul:latest
+  ports:
+    - "8300:8300"
+    - "8400:8400"
+    - "8500:8500"
+    - "8600:53/udp"
+micro:
+  command: --registry=consul --registry_address=consul:8500 api --handler=rpc
+  image: microhq/micro:latest
+  links:
+    - consul
+    - controller
+  ports:
+    - "8080:8080"
+api:
+  build: ./api/controller
+  command: --registry=consul --registry_address=consul:8500 --broker=nats --broker_address=nats:4222
+  links:
+    - consul
+    - nats
+    - mongo
+nats:
+  image: nats:latest
+  ports:
+    - "4222:4222"
+    - "6222:6222"
+    - "8222:8222"
+mongo:
+  image: mongo:latest
+  ports:
+    - "27017:27017"
+  volumes:
+    - "/Users/dx/ucar/sdn-service/mongo/db:/data/db"
+#    - ovncontroller
+#data:
+#  build: ./srv/data
+#  command: --registry=consul --registry=consul --registry_address=consul:8500
+#  links:
+#    - consul
+#infomation:
+#  build: ./srv/information
+#  command: --registry=consul --registry_address=consul:8500
+#  links:
+#    - consul
+#    - mongo
+#ovncontroller:
+#  build: ./srv/ovncontroller
+#  command: --registry=consul --registry_address=consul:8500
+#  links:
+#    - consul

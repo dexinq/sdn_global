@@ -1,0 +1,19 @@
+syntax="proto3";
+
+import "global/global_proto/proto/global.proto";
+
+service Ovs {
+    rpc AddNetflow(Netflow) returns (global.Response) {}
+}
+
+message Parameter {
+    string type = 1;
+    string value = 2;
+}
+
+message Netflow {
+    repeated string server = 1;
+    repeated string client = 2;
+    repeated Parameter parameter = 3;
+}
+

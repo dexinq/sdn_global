@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "global/global_proto/proto/global.proto";
+
+service QosService {
+    rpc GetQos(global.Empty) returns (QosGetterResponse) {}
+    rpc DelQos(QosStruc) returns (global.Response) {}
+}
+
+
+message QosStruc {
+
+}
+
+message QosGetterResponse {
+
+}
+

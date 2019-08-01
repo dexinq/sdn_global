@@ -1,0 +1,26 @@
+syntax="proto3";
+
+import "global/global_proto/proto/global.proto";
+
+service Appcron {
+    rpc GetCronTask (global.Empty) returns (ListCronTask) {}
+    rpc RegisterCronTask (CronTask) returns (global.Response) {}
+    rpc UpdateCronTask (CronTask) returns (global.Response) {}
+}
+
+message CronTask {
+    string TaskName = 1;
+    string TaskPeriod = 2;
+    string Status = 3;
+    string TaskType = 4;
+    TaskMeta tm = 5;
+}
+
+message TaskMeta {
+    string TaskCron = 1;
+    string TaskParameter = 2;
+}
+
+message ListCronTask {
+    repeated CronTask ct = 1;
+}
