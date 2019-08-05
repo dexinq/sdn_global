@@ -3,7 +3,7 @@ package handler
 import (
 	"context"
 	"github.com/micro/go-micro/util/log"
-	"github.com/sdn_global/srv/dataservice/proto"
+	"github.com/dexinq/sdn_global/srv/dataservice/proto"
 )
 
 type DataHandler struct {

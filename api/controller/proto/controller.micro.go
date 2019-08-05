@@ -5,8 +5,8 @@ package controller
 
 import (
 	fmt "fmt"
+	proto1 "github.com/dexinq/sdn_global/global/global_proto/proto"
 	proto "github.com/golang/protobuf/proto"
-	proto1 "global/global_proto/proto"
 	math "math"
 )
 

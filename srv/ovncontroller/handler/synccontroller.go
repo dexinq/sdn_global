@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"github.com/micro/go-micro/broker"
 	"github.com/micro/go-micro/util/log"
-	api_controller "github.com/sdn_global/api/controller/proto"
-	"github.com/sdn_global/srv/ovncontroller/controller"
+	api_controller "github.com/dexinq/sdn_global/api/controller/proto"
+	"github.com/dexinq/sdn_global/srv/ovncontroller/controller"
 )
 
 func SyncMessageHandler(publication broker.Publication) error{

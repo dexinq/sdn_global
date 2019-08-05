@@ -3,7 +3,7 @@ syntax="proto3";
 package dataservice;
 
 import "global/global_proto/proto/global.proto";
-import "api/controller/proto/controller.proto";
+import "github.com/dexinq/sdn_global/api/controller/proto/controller.proto";
 
 service DataService {
     rpc DataServe(DataAcquire) returns (Response) {}

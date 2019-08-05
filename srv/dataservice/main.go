@@ -3,8 +3,8 @@ package main
 import (
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/util/log"
-	"github.com/sdn_global/srv/dataservice/handler"
-	"github.com/sdn_global/srv/dataservice/proto"
+	"github.com/dexinq/sdn_global/srv/dataservice/handler"
+	"github.com/dexinq/sdn_global/srv/dataservice/proto"
 )
 
 

@@ -1,11 +1,11 @@
 package main
 
 import (
+	app_handler "github.com/dexinq/sdn_global/api/ovs/handler"
+	"github.com/dexinq/sdn_global/srv/ovscontroller/handler"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/broker"
 	"github.com/micro/go-micro/util/log"
-	app_handler "github.com/sdn_global/api/ovs/handler"
-	"github.com/sdn_global/srv/ovscontroller/handler"
 )
 
 func main() {

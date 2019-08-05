@@ -3,8 +3,8 @@ package handler
 import (
 	"context"
 	"github.com/micro/go-micro/util/log"
-	proto1 "github.com/sdn_global/api/controller/proto"
-	proto2 "github.com/sdn_global/global/global_proto/proto"
+	proto1 "github.com/dexinq/sdn_global/api/controller/proto"
+	proto2 "github.com/dexinq/sdn_global/global/global_proto/proto"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )

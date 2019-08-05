@@ -4,8 +4,8 @@ import (
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/broker"
 	"github.com/micro/go-micro/util/log"
-	"github.com/sdn_global/api/controller/handler"
-	"github.com/sdn_global/api/controller/proto"
+	"github.com/dexinq/sdn_global/api/controller/proto"
+	"github.com/dexinq/sdn_global/api/controller/handler"
 )
 
 func main() {

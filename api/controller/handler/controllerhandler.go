@@ -3,13 +3,13 @@ package handler
 import (
 	"context"
 	"encoding/json"
+	"github.com/dexinq/sdn_global/api/controller/proto"
+	"github.com/dexinq/sdn_global/global/global_proto/proto"
+	"github.com/dexinq/sdn_global/srv/dataservice/proto"
 	"github.com/google/uuid"
 	"github.com/micro/go-micro/broker"
 	"github.com/micro/go-micro/client"
 	"github.com/micro/go-micro/util/log"
-	"github.com/sdn_global/api/controller/proto"
-	"github.com/sdn_global/global/global_proto/proto"
-	"github.com/sdn_global/srv/dataservice/proto"
 )
 
 const ControllerSyncTopic = "app.controller.sync"

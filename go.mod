@@ -1,4 +1,4 @@
-module github.com/sdn_global
+module github.com/dexinq/sdn_global
 
 go 1.12
 
@@ -8,3 +8,5 @@ require (
 	github.com/micro/go-micro v1.7.0
 	gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce
 )
+
+replace github.com/dexinq/sdn_global => /Users/dx/go/src/github.com/dexinq/sdn_global

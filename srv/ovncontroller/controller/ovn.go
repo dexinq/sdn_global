@@ -3,8 +3,8 @@ package controller
 import (
 	"fmt"
 	"github.com/micro/go-micro/util/log"
-	"github.com/sdn_global/api/controller/proto"
-	"github.com/sdn_global/utils/cmd"
+	"github.com/dexinq/sdn_global/api/controller/proto"
+	"github.com/dexinq/sdn_global/utils/cmd"
 	"gopkg.in/mgo.v2/bson"
 )
 
